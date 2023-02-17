@@ -18,27 +18,24 @@ namespace Work_With_Forms
             InitializeComponent();
         }
 
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {
-            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-                                                                  Color.FromArgb(245, 133, 73),
-                                                                  Color.FromArgb(108, 45, 26),
-                                                                  90F))
-            {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
-        }
+        //protected override void OnPaintBackground(PaintEventArgs e)
+        //{
+        //    using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+        //                                                          Color.FromArgb(245, 133, 73),
+        //                                                          Color.FromArgb(108, 45, 26),
+        //                                                          45F))
+        //    {
+        //        e.Graphics.FillRectangle(brush, this.ClientRectangle);
+        //    }
+        //}
 
-        List<string> textList = new List<string>();
 
         Form2 form = new Form2();
         private void button1_Click(object sender, EventArgs e)
         {
-            textList.Add(textBox1.Text);
-            textList.Add(textBox2.Text);
-            textList.Add(textBox3.Text);
-
-            form.list.Add(textList);
+            form.Name = textBox1.Text;
+            form.Description = textBox2.Text;
+            form.Price = decimal.Parse(textBox3.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
