@@ -12,43 +12,34 @@ namespace Work_With_Forms
 {
     public partial class Form2 : Form
     {
+        public Product pro { get; set; }
+        public EventHandler<EventArgs> Handler { get; set; }
+
         List<Product> textList = new List<Product>();
+        private Product product;
 
-        Product product = new Product();
-
-        private string name;
-
-        public string Name
+        public Product Product
         {
-            get { return name; }
-            set { product.Name = value; }
+            get { return product; }
+            set { product = value; SetLabel(value); }
         }
 
-        private string description;
-
-        public string Description
+        private void SetLabel(Product value)
         {
-            get { return description; }
-            set { product.Description = value; }
+            textList.Add(value);
+            listBox1.Items.Add(value);
         }
 
-        private decimal price;
-
-        public decimal Price
-        {
-            get { return price; }
-            set { product.Price = value; }
-        }
         public Form2()
         {
             InitializeComponent();
-            textList.Add(product);
-            listBox1.Items.Add(textList.ToArray());
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            var changed = listBox1.SelectedItem as Product;
+            pro = changed;
+            Handler.Invoke(sender, e);
         }
     }
 }
