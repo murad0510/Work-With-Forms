@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.NameTxtL = new System.Windows.Forms.TextBox();
+            this.DescriptionTxtL = new System.Windows.Forms.TextBox();
+            this.PriceTxtL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.ShowListBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // NameTxtL
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(283, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 28);
-            this.textBox1.TabIndex = 0;
+            this.NameTxtL.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameTxtL.Location = new System.Drawing.Point(283, 28);
+            this.NameTxtL.Margin = new System.Windows.Forms.Padding(2);
+            this.NameTxtL.Name = "NameTxtL";
+            this.NameTxtL.Size = new System.Drawing.Size(162, 28);
+            this.NameTxtL.TabIndex = 0;
             // 
-            // textBox2
+            // DescriptionTxtL
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(283, 74);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 28);
-            this.textBox2.TabIndex = 1;
+            this.DescriptionTxtL.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescriptionTxtL.Location = new System.Drawing.Point(283, 74);
+            this.DescriptionTxtL.Margin = new System.Windows.Forms.Padding(2);
+            this.DescriptionTxtL.Name = "DescriptionTxtL";
+            this.DescriptionTxtL.Size = new System.Drawing.Size(162, 28);
+            this.DescriptionTxtL.TabIndex = 1;
             // 
-            // textBox3
+            // PriceTxtL
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(283, 125);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 28);
-            this.textBox3.TabIndex = 2;
+            this.PriceTxtL.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceTxtL.Location = new System.Drawing.Point(283, 125);
+            this.PriceTxtL.Margin = new System.Windows.Forms.Padding(2);
+            this.PriceTxtL.Name = "PriceTxtL";
+            this.PriceTxtL.Size = new System.Drawing.Size(162, 28);
+            this.PriceTxtL.TabIndex = 2;
             // 
             // label1
             // 
@@ -102,57 +102,57 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Price";
             // 
-            // button1
+            // AddBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(152, 202);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 39);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AddBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBtn.Location = new System.Drawing.Point(152, 202);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(136, 39);
+            this.AddBtn.TabIndex = 6;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // ShowListBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(152, 254);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(292, 41);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Show list";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ShowListBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowListBtn.Location = new System.Drawing.Point(152, 254);
+            this.ShowListBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowListBtn.Name = "ShowListBtn";
+            this.ShowListBtn.Size = new System.Drawing.Size(292, 41);
+            this.ShowListBtn.TabIndex = 7;
+            this.ShowListBtn.Text = "Show list";
+            this.ShowListBtn.UseVisualStyleBackColor = true;
+            this.ShowListBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // UpdateBtn
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(308, 202);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 39);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.UpdateBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.Location = new System.Drawing.Point(308, 202);
+            this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(136, 39);
+            this.UpdateBtn.TabIndex = 8;
+            this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.UpdateBtn);
+            this.Controls.Add(this.ShowListBtn);
+            this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.PriceTxtL);
+            this.Controls.Add(this.DescriptionTxtL);
+            this.Controls.Add(this.NameTxtL);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -162,15 +162,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox NameTxtL;
+        private System.Windows.Forms.TextBox DescriptionTxtL;
+        private System.Windows.Forms.TextBox PriceTxtL;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button ShowListBtn;
+        private System.Windows.Forms.Button UpdateBtn;
     }
 }
 

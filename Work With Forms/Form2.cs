@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,18 @@ namespace Work_With_Forms
         private void SetLabel(Product value)
         {
             textList.Add(value);
-            listBox1.Items.Add(value);
+            TextAddListBox.Items.Add(value);
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                  Color.FromArgb(245, 133, 73),
+                                                                  Color.FromArgb(108, 45, 26),
+                                                                  45F))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
 
         public Form2()
@@ -37,7 +49,7 @@ namespace Work_With_Forms
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var changed = listBox1.SelectedItem as Product;
+            var changed = TextAddListBox.SelectedItem as Product;
             pro = changed;
             Handler.Invoke(sender, e);
         }

@@ -25,9 +25,9 @@ namespace Work_With_Forms
 
         private void TextChange(object sender, EventArgs e)
         {
-            textBox1.Text = form.pro.Name;
-            textBox2.Text = form.pro.Description;
-            textBox3.Text = form.pro.Price.ToString();
+            NameTxtL.Text = form.pro.Name;
+            DescriptionTxtL.Text = form.pro.Description;
+            PriceTxtL.Text = form.pro.Price.ToString();
         }
 
         protected override void OnPaintBackground(PaintEventArgs e)
@@ -41,35 +41,39 @@ namespace Work_With_Forms
             }
         }
 
+        public void TextClear()
+        {
+            NameTxtL.Text = string.Empty;
+            DescriptionTxtL.Text = string.Empty;
+            PriceTxtL.Text = string.Empty;
+        }
+
         Form2 form = new Form2();
         private void button1_Click(object sender, EventArgs e)
         {
             Product product = new Product();
-            product.Name = textBox1.Text;
-            product.Description = textBox2.Text;
-            product.Price = decimal.Parse(textBox3.Text);
+            product.Name = NameTxtL.Text;
+            product.Description = DescriptionTxtL.Text;
+            product.Price = decimal.Parse(PriceTxtL.Text);
             form.Product = product;
-
-            textBox1.Text = string.Empty;
-            textBox2.Text = string.Empty;
-            textBox3.Text = string.Empty;
+            TextClear();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             form.Handler = IsClick;
-            form.ShowDialog();
+            if (form.ShowDialog() == DialogResult.Cancel)
+            {
+                this.Show();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            form.pro.Name = textBox1.Text;
-            form.pro.Description = textBox2.Text;
-            form.pro.Price = decimal.Parse(textBox3.Text);
-
-            textBox1.Text = string.Empty;
-            textBox2.Text = string.Empty;
-            textBox3.Text = string.Empty;
+            form.pro.Name = NameTxtL.Text;
+            form.pro.Description = DescriptionTxtL.Text;
+            form.pro.Price = decimal.Parse(PriceTxtL.Text);
+            TextClear();
         }
     }
 }
