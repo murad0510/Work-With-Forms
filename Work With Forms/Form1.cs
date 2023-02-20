@@ -41,7 +41,6 @@ namespace Work_With_Forms
             }
         }
 
-
         Form2 form = new Form2();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -60,6 +59,17 @@ namespace Work_With_Forms
         {
             form.Handler = IsClick;
             form.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            form.pro.Name = textBox1.Text;
+            form.pro.Description = textBox2.Text;
+            form.pro.Price = decimal.Parse(textBox3.Text);
+
+            textBox1.Text = string.Empty;
+            textBox2.Text = string.Empty;
+            textBox3.Text = string.Empty;
         }
     }
 }
